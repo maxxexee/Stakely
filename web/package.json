@@ -14,7 +14,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "bs58": "^6.0.0",
     "buffer": "^6.0.3",
-    "lucide-react": "^0.468.0",
+    "lucide-react": "^1.69.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "typescript": "~5.9.3",
