@@ -1,38 +1,50 @@
-# Stakely ⚡
+<p align="center">
+  <img src="docs/assets/banner.png" alt="Stakely banner. P2P sports prediction markets on Solana." width="100%">
+</p>
 
-> **P2P sports prediction markets on Solana — stake against friends, settle on-chain.**
+<p align="center">
+  <a href="https://github.com/maxxexee/Stakely/actions/workflows/check.yml"><img src="https://github.com/maxxexee/Stakely/actions/workflows/check.yml/badge.svg" alt="check workflow"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-1677ff" alt="MIT license"></a>
+  <a href="https://stakely-production.up.railway.app"><img src="https://img.shields.io/badge/live-Railway-25b8ff" alt="Live on Railway"></a>
+  <a href="https://solana.com"><img src="https://img.shields.io/badge/network-devnet-20e57b" alt="Solana devnet"></a>
+  <a href="https://txline-dev.txodds.com"><img src="https://img.shields.io/badge/oracle-TxLINE-ffc728" alt="TxLINE oracle"></a>
+</p>
 
-Live demo → **[stakely-production.up.railway.app](https://stakely-production.up.railway.app/#discover)**
+# Stakely
 
-Built for the **TxLINE / TxODDS FIFA World Cup 2026 Hackathon — Track 1: Markets**
+**P2P sports prediction markets on Solana. Stake against friends, settle on-chain.**
+
+Live demo: [stakely-production.up.railway.app](https://stakely-production.up.railway.app/#discover)
+
+Built for the **TxLINE / TxODDS FIFA World Cup 2026 Hackathon - Track 1: Markets**
 
 ---
 
 ## Screenshots
 
-### Discover — live markets with real TxLINE odds
+### Discover - live markets with real TxLINE odds
 ![Discover](docs/screenshots/discover.png)
 
-### Matches — 17 World Cup fixtures, live scores
+### Matches - 17 World Cup fixtures, live scores
 ![Matches](docs/screenshots/matches.png)
 
-### My Bets — personal challenge desk, wallet-authenticated
+### My Bets - personal challenge desk, wallet-authenticated
 ![My Bets](docs/screenshots/my-bets.png)
 
-### Leaderboard — global & friends ranking by win streak
+### Leaderboard - global and friends ranking by win streak
 ![Leaderboard](docs/screenshots/leaderboard.png)
 
-### Settlement Receipts — on-chain proof archive
+### Settlement Receipts - on-chain proof archive
 ![Receipts](docs/screenshots/receipts.png)
 
 ---
 
 ## What is Stakely?
 
-Stakely lets two people bet directly against each other on a match outcome. No house, no bookmaker. Funds are locked in a Solana escrow smart contract, and the result is settled automatically using a **TxLINE cryptographic proof** — verified on-chain. Every payout has a permanent, auditable receipt.
+Stakely lets two people bet directly against each other on a match outcome. No house, no bookmaker. Funds are locked in a Solana escrow smart contract, and the result is settled automatically using a **TxLINE cryptographic proof** verified on-chain. Every payout has a permanent, auditable receipt.
 
 - Bet as low as **$1 USDC**
-- Wallet-native auth — no email, no KYC
+- Wallet-native auth: no email, no KYC
 - Settlement is trustless: oracle result → Anchor program → winner paid
 - Companion **Telegram bot** for challenge alerts and match notifications
 
@@ -84,7 +96,7 @@ Browser (React + Vite)
 
 ## Smart Contract
 
-Solana Anchor program — `stakely-escrow`
+Solana Anchor program: `stakely-escrow`
 
 - **Devnet program ID:** `J2zMD6jRMFetFr82nqk1jBsmdSYSuDKKsbfnJRqHRcai`
 - **TxLINE verifier (mainnet):** `9ExbZjAapQww1vfcisDmrngPinHTEfpjYRWMunJgcKaA`
@@ -94,9 +106,9 @@ Solana Anchor program — `stakely-escrow`
 
 | Step | Signature |
 |---|---|
-| Create + fund escrow | [2RYrnQ…AmeziE](https://explorer.solana.com/tx/2RYrnQL8wT3XWQVz3hrKKSxb9pZoZWGTLb8xmf1kDfNpyECJupU881TjxBJUiUZVHwpALzsnxq39hktGqPAmeziE?cluster=devnet) |
-| Accept + match funds | [5edH2L…jqfkry](https://explorer.solana.com/tx/5edH2LeSEoZMMnmBUJSY2iWePMWwLZveSAo8uCRfj1vq7X755BAEt8vL5729aFSPDhVrgKH8FNVBSX6ZxZjqfkry?cluster=devnet) |
-| Settle + pay winner | [8iW1u4…mnnYC](https://explorer.solana.com/tx/8iW1u4wNATXrnJQtautrWwQE5R3CETnXD7YZgop7EHTZmxHptKxfRGDPF9sMeAqWvTfgZK7p7rnLniKegqymnYC?cluster=devnet) |
+| Create + fund escrow | [2RYrnQ...AmeziE](https://explorer.solana.com/tx/2RYrnQL8wT3XWQVz3hrKKSxb9pZoZWGTLb8xmf1kDfNpyECJupU881TjxBJUiUZVHwpALzsnxq39hktGqPAmeziE?cluster=devnet) |
+| Accept + match funds | [5edH2L...jqfkry](https://explorer.solana.com/tx/5edH2LeSEoZMMnmBUJSY2iWePMWwLZveSAo8uCRfj1vq7X755BAEt8vL5729aFSPDhVrgKH8FNVBSX6ZxZjqfkry?cluster=devnet) |
+| Settle + pay winner | [8iW1u4...mnnYC](https://explorer.solana.com/tx/8iW1u4wNATXrnJQtautrWwQE5R3CETnXD7YZgop7EHTZmxHptKxfRGDPF9sMeAqWvTfgZK7p7rnLniKegqymnYC?cluster=devnet) |
 
 ---
 
@@ -128,7 +140,7 @@ Solana Anchor program — `stakely-escrow`
 ```bash
 cd api
 cp .env.example .env
-# fill in SUPABASE_URL, SUPABASE_SERVICE_KEY, TXLINE_API_KEY, etc.
+# fill in SUPABASE_URL, SUPABASE_SERVICE_KEY, TXLINE_API_TOKEN, etc.
 pnpm install
 pnpm dev
 ```
@@ -161,8 +173,21 @@ Stakely/
 ├── escrow/       # Solana Anchor smart contract
 ├── db/           # Supabase schema
 ├── txline/       # TxLINE oracle client
+├── docs/         # Brand artboards and screenshots
 └── design/       # UI reference assets
 ```
+
+---
+
+## Repo Checks
+
+The repository ships a check script that validates required files, documentation rules, image dimensions, and internal links:
+
+```bash
+node scripts/check-repo.mjs
+```
+
+CI runs the same script on every push and pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for the house rules and how to re-render the brand assets.
 
 ---
 

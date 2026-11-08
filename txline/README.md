@@ -57,7 +57,7 @@ const fixtures = await txline.getFixtures();
 const score = await txline.getScore('fixture-id-123');
 const odds = await txline.getOdds('fixture-id-123');
 
-// SSE stream — runs forever, reconnects on drop
+// SSE stream: runs forever, reconnects on drop
 const stopScores = txline.streamScores(null, async (event) => {
   // Update Supabase matches table
   await supabase.from('matches').upsert({
